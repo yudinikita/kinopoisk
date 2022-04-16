@@ -1,4 +1,9 @@
 {
+  "settings": {
+    "react": {
+      "version": "detect"
+    }
+  },
   "extends": [
     "next/core-web-vitals",
     "plugin:@typescript-eslint/recommended",
