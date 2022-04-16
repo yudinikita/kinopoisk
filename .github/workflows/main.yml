@@ -24,11 +24,11 @@ jobs:
           restore-keys: |
             ${{ runner.os }}-yarn-
       - name: Install dependencies
-        uses: borales/actions-yarn@v1.22.0
+        uses: borales/actions-yarn@v2.3.0
         with:
           cwd: install
       - name: Build app
-        uses: borales/actions-yarn@v1.22.0
+        uses: borales/actions-yarn@v2.3.0
         with:
           cwd: build
       - name: Semantic release
