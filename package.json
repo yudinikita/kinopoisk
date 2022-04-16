@@ -21,6 +21,9 @@
     "url": "https://github.com/nblackninja/kinopoisk.git"
   },
   "release": {
+    "branches": [
+      "main"
+    ],
     "prepare": [
       "@semantic-release/changelog",
       "@semantic-release/npm",
