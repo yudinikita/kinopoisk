@@ -1,16 +1,12 @@
 import React from 'react'
-import Image from 'next/image'
 import Link from 'next/link'
 import styled from 'styled-components'
-
-import burgerPic from 'resources/icons/burger.svg'
+import DropDown from 'components/NavBar/DropDown'
 
 export default function NavBarBottom() {
   return (
     <Container>
-      <Burger>
-        <Image src={burgerPic} alt="Меню" />
-      </Burger>
+      <DropDown />
       <SearchInput type="text" placeholder="Фильмы, сериалы, персоны" />
       <Link href="/" passHref>
         <FilmsToWatch />
@@ -23,13 +19,6 @@ const Container = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: center;
-`
-
-const Burger = styled.button`
-  padding: 25px 50px 25px 0;
-  background: transparent;
-  cursor: pointer;
-  border: none;
 `
 
 const SearchInput = styled.input`
