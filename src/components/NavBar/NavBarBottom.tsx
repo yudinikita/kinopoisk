@@ -41,7 +41,7 @@ const SearchInput = styled.input`
 `
 
 const FilmsToWatch = styled.a`
-  padding: 25px 10px 25px 50px;
+  padding: 35px 10px 35px 50px;
 
   ::before {
     display: block;
