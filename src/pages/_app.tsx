@@ -5,6 +5,10 @@ import theme from 'styles/theme'
 import Layout from 'components/Layout/Layout'
 import FontStyles from 'styles/fontStyles'
 
+if (process.env.NEXT_PUBLIC_API_MOCKING === 'enabled') {
+  require('mocks')
+}
+
 export default function App({ Component, pageProps }: AppProps) {
   return (
     <>

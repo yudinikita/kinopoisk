@@ -20,6 +20,14 @@
     "type": "git",
     "url": "https://github.com/nblackninja/kinopoisk.git"
   },
+  "keywords": [
+    "js",
+    "javascript",
+    "typescript",
+    "react",
+    "nextjs",
+    "kinopoisk"
+  ],
   "release": {
     "branches": [
       "main"
@@ -38,14 +46,6 @@
       }
     ]
   },
-  "keywords": [
-    "js",
-    "javascript",
-    "typescript",
-    "react",
-    "nextjs",
-    "kinopoisk"
-  ],
   "plugins": [
     "@semantic-release/commit-analyzer",
     "@semantic-release/release-notes-generator",
@@ -54,8 +54,12 @@
     "@semantic-release/npm",
     "@semantic-release/git"
   ],
+  "msw": {
+    "workerDirectory": "public"
+  },
   "dependencies": {
     "embla-carousel-react": "^6.2.0",
+    "msw": "^0.39.2",
     "next": "12.1.5",
     "react": "18.0.0",
     "react-dom": "18.0.0",
