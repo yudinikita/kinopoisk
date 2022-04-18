@@ -1,3 +1,14 @@
+# [1.2.0](https://github.com/nblackninja/kinopoisk/compare/v1.1.0...v1.2.0) (2022-04-18)
+
+
+### Features
+
+* add promo slider on main page ([34d89b4](https://github.com/nblackninja/kinopoisk/commit/34d89b40640f3fd558845b4c83b481cd20b183de))
+* add promo slider video and poster ([bfa3f3d](https://github.com/nblackninja/kinopoisk/commit/bfa3f3d59ff71766c44b9fb1464f78dc0b26efab))
+* add uuid ([3b146c7](https://github.com/nblackninja/kinopoisk/commit/3b146c7b08dfa1c20b8c0857318f9b3751abbd82))
+* **navbar:** add dropdown menu ([e363f29](https://github.com/nblackninja/kinopoisk/commit/e363f293aea6b165422165011b9b2211b1d8ebe4))
+* **navbar:** add link for feature menu ([7bf97b2](https://github.com/nblackninja/kinopoisk/commit/7bf97b22b286078324d9e8a881dabd856aa9876d))
+
 # [1.1.0](https://github.com/nblackninja/kinopoisk/compare/v1.0.0...v1.1.0) (2022-04-17)
 
 
