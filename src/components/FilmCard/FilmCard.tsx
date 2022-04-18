@@ -13,7 +13,7 @@ export interface FilmCardProps {
 }
 
 export default function FilmCard({
-  linkPath = '',
+  linkPath = '/',
   posterSrc,
   title,
   year,
