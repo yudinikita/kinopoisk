@@ -56,16 +56,24 @@ export default function Layout({ children }: LayoutProps) {
         />
       </Head>
 
-      <header>
+      <Header>
         <NavBar />
-      </header>
+      </Header>
       <Main>{children}</Main>
     </>
   )
 }
 
+const Header = styled.header`
+  margin: 0 auto;
+  padding-left: 70px;
+  padding-right: 70px;
+  max-width: ${(props) => props.theme.space.xxl};
+`
+
 const Main = styled.main`
   margin: 0 auto;
   padding-left: 70px;
   padding-right: 70px;
+  max-width: ${(props) => props.theme.space.xxl};
 `
