@@ -13,10 +13,10 @@ const FeatureMenuItem = styled.a`
 export default function FeatureMenu() {
   return (
     <div>
-      <Link href="/" passHref>
+      <Link href="/hd" passHref>
         <FeatureMenuItem>Онлайн-кинотеатр</FeatureMenuItem>
       </Link>
-      <Link href="/" passHref>
+      <Link href="/tv" passHref>
         <FeatureMenuItem>Установить на ТВ</FeatureMenuItem>
       </Link>
     </div>
