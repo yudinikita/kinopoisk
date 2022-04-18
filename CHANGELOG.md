@@ -1,3 +1,14 @@
+# [1.3.0](https://github.com/nblackninja/kinopoisk/compare/v1.2.0...v1.3.0) (2022-04-18)
+
+
+### Features
+
+* add 404 page ([64bc3fd](https://github.com/nblackninja/kinopoisk/commit/64bc3fd971fd29653b7d0e0267dbd652ac93c6bb))
+* add embla-carousel-react ([fd10011](https://github.com/nblackninja/kinopoisk/commit/fd10011728d4bda7c1e6cbf1c4d698c9a65a9006))
+* add film card component ([0c94646](https://github.com/nblackninja/kinopoisk/commit/0c94646d68fd7d767eae6ee621eff094f3a5d4a5))
+* add film carousel component ([c7f1a2d](https://github.com/nblackninja/kinopoisk/commit/c7f1a2d841397cada04a12626f659c82b29f107e))
+* add template film carousel section on main page ([3f262b6](https://github.com/nblackninja/kinopoisk/commit/3f262b648f24f227b80ae5dee46c2ae5ab2d4758))
+
 # [1.2.0](https://github.com/nblackninja/kinopoisk/compare/v1.1.0...v1.2.0) (2022-04-18)
 
 
