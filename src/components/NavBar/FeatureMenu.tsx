@@ -2,14 +2,6 @@ import React from 'react'
 import Link from 'next/link'
 import styled from 'styled-components'
 
-const FeatureMenuItem = styled.a`
-  font-size: 26px;
-
-  :not(:last-child) {
-    margin-right: 34px;
-  }
-`
-
 export default function FeatureMenu() {
   return (
     <div>
@@ -22,3 +14,12 @@ export default function FeatureMenu() {
     </div>
   )
 }
+
+const FeatureMenuItem = styled.a`
+  font-size: 26px;
+  color: ${(props) => props.theme.colors.gray2};
+
+  :not(:last-child) {
+    margin-right: 34px;
+  }
+`
