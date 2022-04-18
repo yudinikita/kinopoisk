@@ -10,6 +10,7 @@ const GlobalStyle = createGlobalStyle<{ theme: ThemeType }>`
     padding: 0;
     margin: 0;
     color: white;
+    height: 100%;
     font-size: ${(props) => props.theme.font.size.base};
     font-family: ${(props) => props.theme.font.family};
     background-color: ${(props) => props.theme.colors.bg};
