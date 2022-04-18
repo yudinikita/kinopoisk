@@ -1,9 +1,10 @@
 import type { NextPage } from 'next'
+import PromoSlider from 'components/PromoSlider/PromoSlider'
 
 const Home: NextPage = () => {
   return (
     <div>
-      <p>Hello, Kinopoisk</p>
+      <PromoSlider />
     </div>
   )
 }
