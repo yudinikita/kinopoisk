@@ -30,7 +30,7 @@ const SearchInput = styled.input`
   padding-left: 30px;
   padding-top: 25px;
   padding-bottom: 25px;
-  border: 2px solid ${(props) => props.theme.colors.gray3};
+  border: 2px solid ${(props) => props.theme.colors.gray5};
   border-radius: ${(props) => props.theme.border.base};
   outline: none;
 
@@ -42,6 +42,7 @@ const SearchInput = styled.input`
 
 const FilmsToWatch = styled.a`
   padding: 35px 10px 35px 50px;
+  filter: opacity(0.7);
 
   ::before {
     display: block;
