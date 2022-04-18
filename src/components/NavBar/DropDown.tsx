@@ -41,10 +41,13 @@ const ListIconContainer = styled.span`
   align-items: center;
 `
 
-const ListIcon = styled(Image)``
+const ListIcon = styled(Image)`
+  transition: opacity 0.3s ease-in-out;
+`
 
 const DropdownContent = styled.div`
-  display: none;
+  visibility: hidden;
+  opacity: 0;
   position: absolute;
   padding-top: 15px;
   padding-bottom: 15px;
@@ -55,6 +58,7 @@ const DropdownContent = styled.div`
   font-size: 22px;
   border-radius: ${(props) => props.theme.border.base};
   z-index: 1;
+  transition: visibility 0s, opacity 0.3s linear;
 
   ${ListIcon} {
     opacity: 0.4;
@@ -77,7 +81,8 @@ const Dropdown = styled.div`
   display: inline-block;
 
   &:hover ${DropdownContent} {
-    display: block;
+    visibility: visible;
+    opacity: 1;
   }
 `
 
