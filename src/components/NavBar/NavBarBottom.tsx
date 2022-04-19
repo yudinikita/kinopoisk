@@ -12,6 +12,7 @@ export default function NavBarBottom() {
     handleSuggest,
     suggest,
     foundFilms,
+    handleKeyDown,
   } = useNavBarBottom()
 
   return (
@@ -23,6 +24,7 @@ export default function NavBarBottom() {
           placeholder="Фильмы, сериалы, персоны"
           onClick={handleSuggest}
           onChange={handleChangeSearchValue}
+          onKeyDown={handleKeyDown}
         />
         {suggest && (
           <CloseBtn onClick={handleCloseSearch}>

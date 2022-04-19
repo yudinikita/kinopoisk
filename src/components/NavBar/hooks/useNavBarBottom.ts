@@ -17,6 +17,12 @@ export default function useNavBarBottom() {
     setSuggest(false)
   }
 
+  const handleKeyDown: React.KeyboardEventHandler<HTMLInputElement> = (e) => {
+    if (e.key === 'Escape') {
+      setSuggest(false)
+    }
+  }
+
   const handleChangeSearchValue: React.ChangeEventHandler<
     HTMLInputElement
   > = async (e) => {
@@ -37,5 +43,6 @@ export default function useNavBarBottom() {
     handleSuggest,
     handleCloseSearch,
     handleChangeSearchValue,
+    handleKeyDown,
   }
 }
