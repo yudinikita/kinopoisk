@@ -45,7 +45,7 @@ export default function NavBarBottom() {
           </CloseBtn>
         )}
       </SearchInputContainer>
-      <Link href="/" passHref>
+      <Link href="/watchlist" passHref>
         <FilmsToWatch />
       </Link>
       {suggest && <SearchSuggest films={foundFilms} />}
