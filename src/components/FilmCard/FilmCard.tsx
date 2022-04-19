@@ -3,13 +3,13 @@ import Link from 'next/link'
 import Image from 'next/image'
 import styled from 'styled-components'
 
-export interface FilmCardProps {
+export interface FilmCardProps extends React.HTMLAttributes<HTMLDivElement> {
+  title?: string
   linkPath?: string
   posterSrc?: string
-  title?: string
+  rating?: number | string
   year?: number | string
   genre?: string
-  rating?: number | string
 }
 
 export default function FilmCard({
@@ -19,21 +19,12 @@ export default function FilmCard({
   year,
   genre,
   rating = 0,
+  ...otherProps
 }: FilmCardProps) {
-  const renderCaptions = () =>
-    year && genre ? (
-      <Link href={linkPath} passHref>
-        <Captions>
-          <Title>{title}</Title>
-          <Subtitle>
-            {year}, {genre}
-          </Subtitle>
-        </Captions>
-      </Link>
-    ) : null
+  const renderDivider = () => (year && genre ? ', ' : null)
 
   return (
-    <Container>
+    <Container {...otherProps}>
       <PosterWrapper>
         <Link href={linkPath}>
           <a>{renderPoster(posterSrc)}</a>
@@ -53,7 +44,16 @@ export default function FilmCard({
           </AddBtn>
         </Overlay>
       </PosterWrapper>
-      {renderCaptions()}
+      <Link href={linkPath} passHref>
+        <Captions>
+          <Title>{title}</Title>
+          <Subtitle>
+            {year}
+            {renderDivider()}
+            {genre}
+          </Subtitle>
+        </Captions>
+      </Link>
     </Container>
   )
 }
