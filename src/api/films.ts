@@ -14,8 +14,10 @@ type ListResponse = {
   films: FilmCardProps[]
 }
 
-export const list = (params?: FilmsListParams) =>
-  api.get<ListResponse>(BASE_URL, { params }).then((response) => response.data)
+export const list = async (params?: FilmsListParams) =>
+  await api
+    .get<ListResponse>(BASE_URL, { params })
+    .then((response) => response.data)
 
-export const detail = (id: string | number) =>
-  api.get(`${BASE_URL}${id}/`).then((response) => response.data)
+export const detail = async (id: string | number) =>
+  await api.get(`${BASE_URL}${id}/`).then((response) => response.data)
