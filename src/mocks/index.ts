@@ -5,6 +5,6 @@ if (typeof window === 'undefined') {
 } else {
   // eslint-disable-next-line
   const { worker } = require('./browser')
-  worker.start()
+  worker.start({ onUnhandledRequest: 'bypass' })
 }
 export {}

@@ -1,12 +1,3 @@
-import { rest } from 'msw'
+import { films } from './handlers/films'
 
-export const handlers = [
-  rest.get('/api', (req, res, ctx) => {
-    return res(
-      ctx.status(200),
-      ctx.json({
-        data: 'Hello, World!',
-      })
-    )
-  }),
-]
+export const handlers = [films]
