@@ -1,3 +1,10 @@
+# [1.8.0](https://github.com/nblackninja/kinopoisk/compare/v1.7.0...v1.8.0) (2022-04-19)
+
+
+### Features
+
+* **pages:** add page for user watch list ([e715e3d](https://github.com/nblackninja/kinopoisk/commit/e715e3d768fc2ef1806968281c25272f946cf9d8))
+
 # [1.7.0](https://github.com/nblackninja/kinopoisk/compare/v1.6.0...v1.7.0) (2022-04-19)
 
 
