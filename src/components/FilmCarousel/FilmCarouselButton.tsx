@@ -65,12 +65,12 @@ const baseButtonStyle = css`
 
 const PrevBtn = styled.button`
   ${baseButtonStyle} {
-    left: 27px;
+    left: 15px;
   }
 `
 
 const NextBtn = styled.button`
   ${baseButtonStyle} {
-    right: 27px;
+    right: 15px;
   }
 `

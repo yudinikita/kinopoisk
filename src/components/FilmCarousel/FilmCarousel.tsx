@@ -1,16 +1,19 @@
 import React, { useCallback, useEffect, useState } from 'react'
-import FilmCard, { FilmCardProps } from 'components/FilmCard/FilmCard'
 import useEmblaCarousel from 'embla-carousel-react'
 import styled from 'styled-components'
 import { v4 } from 'uuid'
+import FilmCard, { FilmCardProps } from 'components/FilmCard/FilmCard'
 import { PrevButton, NextButton } from './FilmCarouselButton'
 
 export interface FilmCarouselProps {
   slides: FilmCardProps[]
 }
 
-export default function FilmCarousel({ slides }: FilmCarouselProps) {
-  const [viewportRef, embla] = useEmblaCarousel({ loop: true })
+export default function FilmCarousel({ slides = [] }: FilmCarouselProps) {
+  const [viewportRef, embla] = useEmblaCarousel({
+    slidesToScroll: 5,
+    align: 'start',
+  })
   const [prevBtnEnabled, setPrevBtnEnabled] = useState(false)
   const [nextBtnEnabled, setNextBtnEnabled] = useState(false)
 
@@ -39,12 +42,7 @@ export default function FilmCarousel({ slides }: FilmCarouselProps) {
   return (
     <Carousel>
       <Viewport ref={viewportRef}>
-        <Container>
-          {renderSlides()}
-          <Slide>
-            <FilmCard />
-          </Slide>
-        </Container>
+        <Container>{renderSlides()}</Container>
       </Viewport>
       <PrevButton onClick={scrollPrev} enabled={prevBtnEnabled} />
       <NextButton onClick={scrollNext} enabled={nextBtnEnabled} />
@@ -62,11 +60,13 @@ const Viewport = styled.div`
 
 const Container = styled.div`
   display: flex;
+  margin-left: -10px;
 `
 
 const Slide = styled.div`
   position: relative;
-  flex: 0 0 100%;
+  flex: 0 0 20%;
   display: flex;
   justify-content: space-between;
+  padding-left: 10px;
 `

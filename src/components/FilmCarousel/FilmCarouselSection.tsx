@@ -1,17 +1,18 @@
-import FilmCarousel, { FilmCarouselProps } from './FilmCarousel'
 import styled from 'styled-components'
+import FilmCarousel, { FilmCarouselProps } from './FilmCarousel'
 
 interface FilmCarouselSectionProps extends FilmCarouselProps {
-  title: string
+  title?: string
 }
 
 export default function FilmCarouselSection({
-  title,
+  title = '',
+  slides = [],
 }: FilmCarouselSectionProps) {
   return (
     <Section>
       <Title>{title}</Title>
-      <FilmCarousel slides={[]} />
+      <FilmCarousel slides={slides} />
     </Section>
   )
 }
