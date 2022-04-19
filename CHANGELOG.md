@@ -1,3 +1,10 @@
+# [1.7.0](https://github.com/nblackninja/kinopoisk/compare/v1.6.0...v1.7.0) (2022-04-19)
+
+
+### Features
+
+* add close search on key up ([4d6d9ed](https://github.com/nblackninja/kinopoisk/commit/4d6d9edfb016a885e336076d6e762d47ed0d6d74))
+
 # [1.6.0](https://github.com/nblackninja/kinopoisk/compare/v1.5.1...v1.6.0) (2022-04-19)
 
 

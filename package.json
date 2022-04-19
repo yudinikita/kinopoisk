@@ -1,7 +1,7 @@
 {
   "private": true,
   "name": "kinopoisk",
-  "version": "1.6.0",
+  "version": "1.7.0",
   "license": "MIT",
   "description": "Internet service about movies. Movie search, movie news and more.",
   "author": "Nikita Yudin <nikitayudin782@gmail.com>",
