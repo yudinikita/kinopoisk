@@ -58,6 +58,7 @@
     "workerDirectory": "public"
   },
   "dependencies": {
+    "axios": "^0.26.1",
     "embla-carousel-react": "^6.2.0",
     "msw": "^0.39.2",
     "next": "12.1.5",
