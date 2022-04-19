@@ -1,3 +1,12 @@
+# [1.6.0](https://github.com/nblackninja/kinopoisk/compare/v1.5.1...v1.6.0) (2022-04-19)
+
+
+### Features
+
+* add debounce ([b154bb0](https://github.com/nblackninja/kinopoisk/commit/b154bb08ebf8079c23ae4b2026b9144e3dac5a40))
+* add search in header ([1c1c894](https://github.com/nblackninja/kinopoisk/commit/1c1c8941456074de6cdce6ed24f6ad5425011d28))
+* **api:** add filter for api films ([20844a8](https://github.com/nblackninja/kinopoisk/commit/20844a83811996ba40a8fdc4c81e6b047dca5c0a))
+
 ## [1.5.1](https://github.com/nblackninja/kinopoisk/compare/v1.5.0...v1.5.1) (2022-04-19)
 
 
