@@ -1,3 +1,19 @@
+# [1.5.0](https://github.com/nblackninja/kinopoisk/compare/v1.4.0...v1.5.0) (2022-04-19)
+
+
+### Bug Fixes
+
+* **filmcard:** add render divider ([79383d4](https://github.com/nblackninja/kinopoisk/commit/79383d4e8a5eedab93f134c8b680420a0290f9a3))
+* **filmcard:** change default link path ([508eae7](https://github.com/nblackninja/kinopoisk/commit/508eae79dae3cd4b4a1ca46e6db7fdddac1f98aa))
+* **filmcarousel:** fix slides ([d72cc4f](https://github.com/nblackninja/kinopoisk/commit/d72cc4f7e892418c4de9a6f1a834e29391299882))
+
+
+### Features
+
+* add axios ([d939e0d](https://github.com/nblackninja/kinopoisk/commit/d939e0d2e03c6674479bb7dece8da6b65ae0afcd))
+* **api:** add films api ([6813cf3](https://github.com/nblackninja/kinopoisk/commit/6813cf3b2c216fd7e00ee38b368341ab490fbe34))
+* **axios:** add api for films list ([c93878a](https://github.com/nblackninja/kinopoisk/commit/c93878a00c6e8a584ceef8aaeaee79e98b2cb97d))
+
 # [1.4.0](https://github.com/nblackninja/kinopoisk/compare/v1.3.0...v1.4.0) (2022-04-18)
 
 
