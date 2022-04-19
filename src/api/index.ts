@@ -1,1 +1,1 @@
-export const BASE_URL = 'https://kinopoisk.ru/api'
+export const BASE_URL = process.env['URL'] + '/api'
