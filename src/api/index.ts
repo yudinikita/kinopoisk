@@ -1,1 +1,1 @@
-export const BASE_URL = process.env['URL'] + '/api'
+export const BASE_URL = process.env['SERVER_URL'] + '/api'
