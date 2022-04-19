@@ -6,6 +6,7 @@ export type FilmsListTypes = 'ticket' | 'watch_now' | 'recommendation'
 export interface FilmsListParams {
   type?: FilmsListTypes | string
   count?: string
+  filter?: string
 }
 
 export async function loadFilms(
