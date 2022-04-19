@@ -1,3 +1,10 @@
+# [1.4.0](https://github.com/nblackninja/kinopoisk/compare/v1.3.0...v1.4.0) (2022-04-18)
+
+
+### Features
+
+* add mock service worker ([05ff11b](https://github.com/nblackninja/kinopoisk/commit/05ff11bb37e760544ac996742c9f0adaaceb5b7f))
+
 # [1.3.0](https://github.com/nblackninja/kinopoisk/compare/v1.2.0...v1.3.0) (2022-04-18)
 
 
