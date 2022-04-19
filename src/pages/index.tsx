@@ -27,7 +27,7 @@ const Home: NextPage = ({
 
 export default Home
 
-export async function getStaticProps() {
+export async function getServerSideProps() {
   const filmTickets = await loadFilms({ type: 'ticket', count: '10' })
   const filmWatchNow = await loadFilms({ type: 'watch_now', count: '10' })
   const filmRecommendation = await loadFilms({
