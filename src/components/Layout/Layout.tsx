@@ -65,6 +65,7 @@ export default function Layout({ children }: LayoutProps) {
 }
 
 const Header = styled.header`
+  background-color: ${(props) => props.theme.colors.bg};
   margin: 0 auto;
   padding-left: 70px;
   padding-right: 70px;
