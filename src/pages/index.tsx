@@ -27,7 +27,7 @@ const Home: NextPage = ({
 
 export default Home
 
-export async function getStaticProps() {
+export async function getServerSideProps() {
   let filmTickets: object = []
   let filmWatchNow: object = []
   let filmRecommendation: object = []
