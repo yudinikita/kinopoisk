@@ -2,7 +2,7 @@ import type { NextPage } from 'next'
 import PromoSlider from 'components/PromoSlider/PromoSlider'
 import FilmCarouselSection from 'components/FilmCarousel/FilmCarouselSection'
 import { FilmCardProps } from 'components/FilmCard/FilmCard'
-import * as filmsApi from 'api/films'
+import { loadFilms } from 'api/films'
 
 interface HomeProps {
   filmTickets?: FilmCardProps[]
@@ -27,22 +27,13 @@ const Home: NextPage = ({
 
 export default Home
 
-export async function getServerSideProps() {
-  let filmTickets: object = []
-  let filmWatchNow: object = []
-  let filmRecommendation: object = []
-
-  await filmsApi
-    .list({ type: 'ticket' })
-    .then((data) => (filmTickets = data.films))
-
-  await filmsApi
-    .list({ type: 'watch_now' })
-    .then((data) => (filmWatchNow = data.films))
-
-  await filmsApi
-    .list({ type: 'recommendation', count: 5 })
-    .then((data) => (filmRecommendation = data.films))
+export async function getStaticProps() {
+  const filmTickets = await loadFilms({ type: 'ticket', count: '10' })
+  const filmWatchNow = await loadFilms({ type: 'watch_now', count: '10' })
+  const filmRecommendation = await loadFilms({
+    type: 'recommendation',
+    count: '5',
+  })
 
   return {
     props: {

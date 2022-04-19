@@ -1,23 +1,21 @@
-import api from './index'
+import { BASE_URL } from 'api/index'
 import { FilmCardProps } from 'components/FilmCard/FilmCard'
-
-const BASE_URL = 'films/'
 
 export type FilmsListTypes = 'ticket' | 'watch_now' | 'recommendation'
 
 export interface FilmsListParams {
-  type?: FilmsListTypes | string | null
-  count?: number | string | null
+  type?: FilmsListTypes | string
+  count?: string
 }
 
-type ListResponse = {
-  films: FilmCardProps[]
+export async function loadFilms(
+  params: FilmsListParams
+): Promise<FilmCardProps[]> {
+  let films = [] as FilmCardProps[]
+
+  await fetch(BASE_URL + '/films?' + new URLSearchParams({ ...params }))
+    .then((res) => res.json())
+    .then((data) => (films = data?.films))
+
+  return films
 }
-
-export const list = async (params?: FilmsListParams) =>
-  await api
-    .get<ListResponse>(BASE_URL, { params })
-    .then((response) => response.data)
-
-export const detail = async (id: string | number) =>
-  await api.get(`${BASE_URL}${id}/`).then((response) => response.data)
