@@ -1,3 +1,10 @@
+## [1.5.1](https://github.com/nblackninja/kinopoisk/compare/v1.5.0...v1.5.1) (2022-04-19)
+
+
+### Bug Fixes
+
+* **api:** add async for api ([95c0133](https://github.com/nblackninja/kinopoisk/commit/95c013311ab54739297abcc11443ff4389065890))
+
 # [1.5.0](https://github.com/nblackninja/kinopoisk/compare/v1.4.0...v1.5.0) (2022-04-19)
 
 
