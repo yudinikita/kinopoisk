@@ -7,6 +7,7 @@ export interface FilmsListParams {
   type?: FilmsListTypes | string
   count?: string
   filter?: string
+  id?: string
 }
 
 export async function loadFilms(
