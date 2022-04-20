@@ -9,16 +9,22 @@ if (process.env.NEXT_PUBLIC_API_MOCKING === 'enabled') {
   require('mocks')
 }
 
+import { Provider } from 'react-redux'
+
+import store from '../app/store'
+
 export default function App({ Component, pageProps }: AppProps) {
   return (
     <>
-      <ThemeProvider theme={theme}>
-        <GlobalStyle />
-        <FontStyles />
-        <Layout>
-          <Component {...pageProps} />
-        </Layout>
-      </ThemeProvider>
+      <Provider store={store}>
+        <ThemeProvider theme={theme}>
+          <GlobalStyle />
+          <FontStyles />
+          <Layout>
+            <Component {...pageProps} />
+          </Layout>
+        </ThemeProvider>
+      </Provider>
     </>
   )
 }
