@@ -2,6 +2,7 @@ import { FilmCardProps } from 'components/FilmCard/FilmCard'
 
 export const filmsListCard: FilmCardProps[] = [
   {
+    id: '01',
     title: 'Острые козырьки',
     linkPath: '/film/01',
     posterSrc: '/static/images/covers/01.jpg',
@@ -10,6 +11,7 @@ export const filmsListCard: FilmCardProps[] = [
     genre: 'криминал',
   },
   {
+    id: '02',
     title: 'Волк с Уолл-стрит',
     linkPath: '/film/02',
     posterSrc: '/static/images/covers/02.jpg',
@@ -18,6 +20,7 @@ export const filmsListCard: FilmCardProps[] = [
     genre: 'биография',
   },
   {
+    id: '03',
     title: 'Бесстыжие',
     linkPath: '/film/03',
     posterSrc: '/static/images/covers/03.jpg',
@@ -26,6 +29,7 @@ export const filmsListCard: FilmCardProps[] = [
     genre: 'комедия',
   },
   {
+    id: '04',
     title: 'Форрест Гамп',
     linkPath: '/film/04',
     posterSrc: '/static/images/covers/04.jpg',
@@ -34,6 +38,7 @@ export const filmsListCard: FilmCardProps[] = [
     genre: 'мелодрама',
   },
   {
+    id: '05',
     title: 'Король Лев',
     linkPath: '/film/05',
     posterSrc: '/static/images/covers/05.jpg',
@@ -42,6 +47,7 @@ export const filmsListCard: FilmCardProps[] = [
     genre: 'мультфильм',
   },
   {
+    id: '06',
     title: 'Матрица',
     linkPath: '/film/06',
     posterSrc: '/static/images/covers/06.jpg',
@@ -50,6 +56,7 @@ export const filmsListCard: FilmCardProps[] = [
     genre: 'фантастика',
   },
   {
+    id: '07',
     title: 'Шрэк',
     linkPath: '/film/07',
     posterSrc: '/static/images/covers/07.jpg',
@@ -58,6 +65,7 @@ export const filmsListCard: FilmCardProps[] = [
     genre: 'приключения',
   },
   {
+    id: '08',
     title: 'Темный рыцарь',
     linkPath: '/film/08',
     posterSrc: '/static/images/covers/08.jpg',
@@ -66,6 +74,7 @@ export const filmsListCard: FilmCardProps[] = [
     genre: 'боевик',
   },
   {
+    id: '09',
     title: 'Дюна',
     linkPath: '/film/09',
     posterSrc: '/static/images/covers/09.jpg',
@@ -74,6 +83,7 @@ export const filmsListCard: FilmCardProps[] = [
     genre: 'фантастика',
   },
   {
+    id: '10',
     title: 'Не смотрите наверх',
     linkPath: '/film/10',
     posterSrc: '/static/images/covers/10.jpg',
