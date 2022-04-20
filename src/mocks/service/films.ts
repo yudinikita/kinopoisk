@@ -9,8 +9,11 @@ export const getFilms = (params: FilmsListParams): FilmCardProps[] => {
 
   const count = Number(params?.count) || 10
   const filter = params?.filter
+  const id = params?.id
 
   const films = filmsListCard.slice(0, count)
+
+  if (id) return films.filter((film) => film.id === id)
 
   switch (params?.type) {
     case 'ticket':

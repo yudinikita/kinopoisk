@@ -6,8 +6,9 @@ export const films = rest.get(BASE_URL + '/films', (req, res, ctx) => {
   const type = req.url.searchParams.get('type') ?? ''
   const count = req.url.searchParams.get('count') ?? ''
   const filter = req.url.searchParams.get('filter') ?? ''
+  const id = req.url.searchParams.get('id') ?? ''
 
-  const films = getFilms({ type, count, filter })
+  const films = getFilms({ type, count, filter, id })
 
   return res(
     ctx.status(200),
