@@ -1,3 +1,15 @@
+# [1.9.0](https://github.com/nblackninja/kinopoisk/compare/v1.8.0...v1.9.0) (2022-04-20)
+
+
+### Features
+
+* add redux-toolkit ([6185b46](https://github.com/nblackninja/kinopoisk/commit/6185b464e6c21a660947f05d824a52a6b28e10ed))
+* **filmcard:** add ability to remove and add to watchlist ([c3ef22c](https://github.com/nblackninja/kinopoisk/commit/c3ef22c35d8298a4d742a03680e122be70989120))
+* **mocks:** add filter films by id ([a410565](https://github.com/nblackninja/kinopoisk/commit/a410565935a6d19b2fb5011b1a35ddd55f64bff3))
+* **mocks:** add id in film list ([df161bd](https://github.com/nblackninja/kinopoisk/commit/df161bd6fab838b5db4f865986681216e4154874))
+* **redux:** add reducer for watchlist ([6974db6](https://github.com/nblackninja/kinopoisk/commit/6974db67afc2c02cce85a408ffa6d20716450d89))
+* **redux:** create store and connect ([9d9ab3d](https://github.com/nblackninja/kinopoisk/commit/9d9ab3d177a8a1f8b754d4a3e8bcc08b0f17e1f5))
+
 # [1.8.0](https://github.com/nblackninja/kinopoisk/compare/v1.7.0...v1.8.0) (2022-04-19)
 
 
