@@ -1,10 +1,32 @@
 import { NextPage } from 'next'
 import styled from 'styled-components'
 import Link from 'next/link'
+import { v4 } from 'uuid'
+import { useAppSelector } from 'app/hooks'
+import { currentWatchlist } from 'reducers/watchlist'
+import FilmCard from 'components/FilmCard/FilmCard'
 
 const Watchlist: NextPage = () => {
+  const watchlist = useAppSelector(currentWatchlist)
+
+  if (watchlist && watchlist.length > 0) {
+    return (
+      <Container>
+        {watchlist.map((film) => (
+          <FilmCard key={v4()} {...film} />
+        ))}
+      </Container>
+    )
+  }
+
+  return <WatchlistNotFound />
+}
+
+export default Watchlist
+
+const WatchlistNotFound = () => {
   return (
-    <Container>
+    <ContainerNotFound>
       <FilmsToWatch />
       <p>
         Сохраняйте интересные фильмы и сериалы, чтобы не потерять — они появятся
@@ -13,13 +35,19 @@ const Watchlist: NextPage = () => {
       <Link href="/" passHref>
         <LinkToHome>Перейти на главную</LinkToHome>
       </Link>
-    </Container>
+    </ContainerNotFound>
   )
 }
 
-export default Watchlist
-
 const Container = styled.div`
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  row-gap: 50px;
+  padding-bottom: 50px;
+`
+
+const ContainerNotFound = styled.div`
   text-align: center;
   margin: 0 auto;
   max-width: 800px;
