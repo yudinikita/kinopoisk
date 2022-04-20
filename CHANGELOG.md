@@ -1,3 +1,10 @@
+# [1.10.0](https://github.com/nblackninja/kinopoisk/compare/v1.9.0...v1.10.0) (2022-04-20)
+
+
+### Features
+
+* **pages:** release watchlist page ([f607705](https://github.com/nblackninja/kinopoisk/commit/f6077059790335ccd5efeed8bc5cd660878420ed))
+
 # [1.9.0](https://github.com/nblackninja/kinopoisk/compare/v1.8.0...v1.9.0) (2022-04-20)
 
 
