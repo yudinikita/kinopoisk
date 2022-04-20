@@ -1,6 +1,6 @@
 import { FilmCardProps } from 'components/FilmCard/FilmCard'
 
-export const filmsListCard: FilmCardProps[] = [
+export const listFilms: FilmCardProps[] = [
   {
     id: '01',
     title: 'Острые козырьки',

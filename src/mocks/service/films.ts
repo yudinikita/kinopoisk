@@ -1,4 +1,4 @@
-import { filmsListCard } from 'mocks/lists/filmsList'
+import { listFilms } from 'mocks/lists/filmsList'
 import { FilmsListParams } from 'api/films'
 import { FilmCardProps } from 'components/FilmCard/FilmCard'
 
@@ -11,7 +11,7 @@ export const getFilms = (params: FilmsListParams): FilmCardProps[] => {
   const filter = params?.filter
   const id = params?.id
 
-  const films = filmsListCard.slice(0, count)
+  const films = listFilms.slice(0, count)
 
   if (id) return films.filter((film) => film.id === id)
 
