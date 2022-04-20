@@ -2,8 +2,11 @@ import React from 'react'
 import Link from 'next/link'
 import Image from 'next/image'
 import styled from 'styled-components'
+import { useFilmCard } from './hooks/useFilmCard'
+import { RemoveWatchlistBtn, AddWatchlistBtn } from './WatchlistBtn'
 
 export interface FilmCardProps extends React.HTMLAttributes<HTMLDivElement> {
+  id?: string
   title?: string
   linkPath?: string
   posterSrc?: string
@@ -13,6 +16,7 @@ export interface FilmCardProps extends React.HTMLAttributes<HTMLDivElement> {
 }
 
 export default function FilmCard({
+  id = '',
   linkPath = '/',
   posterSrc,
   title,
@@ -21,7 +25,20 @@ export default function FilmCard({
   rating = 0,
   ...otherProps
 }: FilmCardProps) {
+  const {
+    deleteWatchlistBtn,
+    handleDeleteWatchlistBtn,
+    handleAddWatchlistBtn,
+  } = useFilmCard(id as Pick<FilmCardProps, 'id'>)
+
   const renderDivider = () => (year && genre ? ', ' : null)
+
+  const renderBtn = () =>
+    deleteWatchlistBtn ? (
+      <RemoveWatchlistBtn onClick={handleDeleteWatchlistBtn} />
+    ) : (
+      <AddWatchlistBtn onClick={handleAddWatchlistBtn} />
+    )
 
   return (
     <Container {...otherProps}>
@@ -31,17 +48,7 @@ export default function FilmCard({
         </Link>
         <Overlay>
           <Rating>{rating}</Rating>
-          <AddBtn>
-            <svg
-              width="8"
-              height="8"
-              fill="none"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <path fill="#fff" d="M3 0h2v8H3z" />
-              <path fill="#fff" d="M8 3v2H0V3z" />
-            </svg>
-          </AddBtn>
+          {renderBtn()}
         </Overlay>
       </PosterWrapper>
       <Link href={linkPath} passHref>
@@ -127,27 +134,6 @@ const Rating = styled.div`
   border-radius: 10px;
   background-color: #65b634;
   pointer-events: all;
-`
-
-const AddBtn = styled.button`
-  display: flex;
-  padding: 15px;
-  border: none;
-  position: absolute;
-  right: 10px;
-  bottom: 10px;
-  border-radius: 10px;
-  background-color: ${(props) => props.theme.colors.brand};
-  cursor: pointer;
-  pointer-events: all;
-
-  &:hover {
-    filter: opacity(0.8);
-  }
-
-  &:active {
-    transform: scale(0.95);
-  }
 `
 
 const Captions = styled.a`
