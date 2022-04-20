@@ -1,3 +1,10 @@
+# [1.11.0](https://github.com/nblackninja/kinopoisk/compare/v1.10.0...v1.11.0) (2022-04-20)
+
+
+### Features
+
+* **pages:** add template page film by id ([8a86566](https://github.com/nblackninja/kinopoisk/commit/8a865667f925eed1af2885bf44c7085a813a104a))
+
 # [1.10.0](https://github.com/nblackninja/kinopoisk/compare/v1.9.0...v1.10.0) (2022-04-20)
 
 
