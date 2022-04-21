@@ -1,16 +1,28 @@
 import Image from 'next/image'
 import styled from 'styled-components'
 
-export default function FilmTrailer() {
+interface FilmTrailerProps {
+  trailerCoverUrl?: string
+  filmTitle?: string
+  trailerLength?: string
+  trailerDate?: string
+}
+
+export default function FilmTrailer({
+  trailerCoverUrl = '',
+  filmTitle = '',
+  trailerLength = '',
+  trailerDate = '',
+}: FilmTrailerProps) {
   return (
     <Container>
       <PosterContainer>
         <TrailerWrapper>
           <TrailerPoster
-            src="/static/images/covers/07.jpg"
+            src={trailerCoverUrl}
             layout="fill"
             objectFit="cover"
-            alt="Обложка трейлера"
+            alt={`Трейлер ${filmTitle}`}
           />
         </TrailerWrapper>
         <TrailerWatchBtn>
@@ -27,31 +39,15 @@ export default function FilmTrailer() {
           </WatchBtnIcon>
           Трейлер
         </TrailerWatchBtn>
-        <TrailerTime>1:30</TrailerTime>
+        <TrailerTime>{trailerLength}</TrailerTime>
       </PosterContainer>
       <Captions>
         <Title>Трейлер</Title>
-        <Date>27 января 2022</Date>
+        <Date>{trailerDate}</Date>
       </Captions>
     </Container>
   )
 }
-
-const TrailerTime = styled.div`
-  position: absolute;
-  bottom: 10px;
-  right: 10px;
-  display: flex;
-  align-items: center;
-  padding: 3px;
-  margin: 0;
-  background-color: ${(props) => props.theme.colors.bg};
-  border-radius: 5px;
-  font-size: 12px;
-  cursor: pointer;
-  color: white;
-  opacity: 0.8;
-`
 
 const Container = styled.div`
   margin-bottom: 30px;
@@ -81,9 +77,9 @@ const TrailerPoster = styled(Image)`
 const TrailerWrapper = styled.button`
   padding: 0;
   margin: 0;
-  background: transparent;
   border: 0;
   cursor: pointer;
+  background-color: ${(props) => props.theme.colors.gray5};
 `
 
 const WatchBtnIcon = styled.svg`
@@ -102,6 +98,21 @@ const TrailerWatchBtn = styled.button`
   border: 0;
   border-radius: ${(props) => props.theme.border.base};
   font-size: 16px;
+  cursor: pointer;
+  color: white;
+`
+
+const TrailerTime = styled.div`
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+  display: flex;
+  align-items: center;
+  padding: 3px;
+  margin: 0;
+  background-color: rgba(40, 40, 40, 0.8);
+  border-radius: 5px;
+  font-size: 12px;
   cursor: pointer;
   color: white;
 `

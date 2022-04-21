@@ -1,20 +1,33 @@
 import Image from 'next/image'
 import styled from 'styled-components'
 
-export default function FilmPoster() {
+interface FilmPosterProps {
+  posterUrl?: string
+  filmTitle?: string
+}
+
+export default function FilmPoster({
+  posterUrl = '',
+  filmTitle = '',
+}: FilmPosterProps) {
   return (
     <Container>
       <PosterContainer>
-        <FilmPosterImage
-          src="/static/images/covers/05.jpg"
-          layout="fill"
-          objectFit="cover"
-          alt="Обложка фильма"
-        />
+        {renderPosterImage(posterUrl, filmTitle)}
       </PosterContainer>
     </Container>
   )
 }
+
+const renderPosterImage = (posterUrl?: string, filmTitle?: string) =>
+  posterUrl ? (
+    <FilmPosterImage
+      src={posterUrl}
+      layout="fill"
+      objectFit="cover"
+      alt={filmTitle}
+    />
+  ) : null
 
 const Container = styled.div`
   margin-bottom: 25px;

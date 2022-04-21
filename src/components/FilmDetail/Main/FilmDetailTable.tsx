@@ -1,89 +1,36 @@
 import styled from 'styled-components'
 import { v4 } from 'uuid'
+import type { TableAboutFilm } from 'mocks/types'
 
-const filmDetailDataTable = [
-  {
-    property: 'Год производства',
-    value: '2022',
-  },
-  {
-    property: 'Страна',
-    value: 'Россия',
-  },
-  {
-    property: 'Жанр',
-    value: 'Комедия',
-  },
-  {
-    property: 'Слоган',
-    value: '—',
-  },
-  {
-    property: 'Режиссер',
-    value: 'Никита Владимиров',
-  },
-  {
-    property: 'Сценарий',
-    value: 'Андрей Таратухин, Юлия Крутова',
-  },
-  {
-    property: 'Продюсер',
-    value: 'Никита Владимиров',
-  },
-  {
-    property: 'Оператор',
-    value: 'Сергей Астахов',
-  },
-  {
-    property: 'Композитор',
-    value: 'Федор Журавлев',
-  },
-  {
-    property: 'Художник',
-    value: 'Софья Матвеева',
-  },
-  {
-    property: 'Монтаж',
-    value: 'Ольга Гриншпун',
-  },
-  {
-    property: 'Зрители',
-    value: '66.3 тыс',
-  },
-  {
-    property: 'Премьера в России',
-    value: '14 апреля 2022',
-  },
-  {
-    property: 'Возраст',
-    value: '12+',
-  },
-  {
-    property: 'Время',
-    value: '19 мин. / 01:19',
-  },
-]
+interface FilmDetailTableProps {
+  table?: TableAboutFilm[]
+}
 
-export default function FilmDetailTable() {
-  return (
-    <Container>
-      <Title>О фильме</Title>
-      <Table>
-        {filmDetailDataTable.map((filmDataTable) => (
-          <Row key={v4()}>
-            <Property>{filmDataTable.property}</Property>
-            <Value>{filmDataTable.value}</Value>
-          </Row>
-        ))}
-      </Table>
-    </Container>
-  )
+export default function FilmDetailTable({ table }: FilmDetailTableProps) {
+  if (table && table.length > 0) {
+    return (
+      <Container>
+        <Title>О фильме</Title>
+        <Table>
+          {table.map((item) => (
+            <Row key={v4()}>
+              <Property>{item.property}</Property>
+              <Value>{item.value}</Value>
+            </Row>
+          ))}
+        </Table>
+      </Container>
+    )
+  }
+
+  return null
 }
 
 const Container = styled.div`
   display: flex;
   flex-direction: column;
   padding: 0 10px;
+  width: 600px;
 `
 
 const Title = styled.h3`

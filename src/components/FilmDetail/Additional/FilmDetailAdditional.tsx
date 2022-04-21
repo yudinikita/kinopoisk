@@ -2,11 +2,17 @@ import styled from 'styled-components'
 import FilmDetailFriends from 'components/FilmDetail/Additional/FilmDetailFriends'
 import FilmDetailSynopsis from 'components/FilmDetail/Additional/FilmDetailSynopsis'
 
-export default function FilmDetailAdditional() {
+interface FilmDetailAdditionalProps {
+  desc?: string
+}
+
+export default function FilmDetailAdditional({
+  desc,
+}: FilmDetailAdditionalProps) {
   return (
     <Container>
       <Column>
-        <FilmDetailSynopsis />
+        <FilmDetailSynopsis desc={desc} />
       </Column>
       <Column>
         <FilmDetailFriends />
