@@ -1,4 +1,10 @@
-import Document, { DocumentContext } from 'next/document'
+import Document, {
+  DocumentContext,
+  Html,
+  Head,
+  Main,
+  NextScript,
+} from 'next/document'
 import { ServerStyleSheet } from 'styled-components'
 
 // eslint-disable-next-line @typescript-eslint/ban-ts-comment
@@ -28,5 +34,53 @@ export default class MyDocument extends Document {
     } finally {
       sheet.seal()
     }
+  }
+
+  render() {
+    return (
+      <Html>
+        <Head>
+          <link
+            rel="preload"
+            href="/static/fonts/Inter/Inter-Regular.woff2"
+            as="font"
+            type="font/woff2"
+            crossOrigin=""
+          />
+          <link
+            rel="preload"
+            href="/static/fonts/Inter/Inter-Medium.woff2"
+            as="font"
+            type="font/woff2"
+            crossOrigin=""
+          />
+          <link
+            href="/static/fonts/Inter/Inter-SemiBold.woff2"
+            rel="stylesheet"
+            as="font"
+            type="font/woff2"
+            crossOrigin=""
+          />
+          <link
+            href="/static/fonts/Inter/Inter-Bold.woff2"
+            rel="stylesheet"
+            as="font"
+            type="font/woff2"
+            crossOrigin=""
+          />
+          <link
+            href="/static/fonts/Inter/Inter-ExtraBold.woff2"
+            rel="stylesheet"
+            as="font"
+            type="font/woff2"
+            crossOrigin=""
+          />
+        </Head>
+        <body>
+          <Main />
+          <NextScript />
+        </body>
+      </Html>
+    )
   }
 }

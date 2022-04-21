@@ -21,39 +21,8 @@ export default function Layout({ children }: LayoutProps) {
         <meta
           name="keywords"
           content="фильм фильмы поиск кино обои афиша новости обзоры сегодня в кино скоро кассовые сборы кинотеатры актер актеры актриса режиссер сценарист фото фотография постер"
-          data-tid="57f72b5"
         />
         <link rel="icon" href="/favicon.ico" />
-        <link
-          rel="preload"
-          href="/static/fonts/Inter/Inter-Regular.woff2"
-          as="font"
-          crossOrigin=""
-        />
-        <link
-          rel="preload"
-          href="/static/fonts/Inter/Inter-Medium.woff2"
-          as="font"
-          crossOrigin=""
-        />
-        <link
-          rel="preload"
-          href="/static/fonts/Inter/Inter-Bold.woff2"
-          as="font"
-          crossOrigin=""
-        />
-        <link
-          rel="preload"
-          href="/static/fonts/Inter/Inter-SemiBold.woff2"
-          as="font"
-          crossOrigin=""
-        />
-        <link
-          rel="preload"
-          href="/static/fonts/Inter/Inter-ExtraBold.woff2"
-          as="font"
-          crossOrigin=""
-        />
       </Head>
 
       <Header>
