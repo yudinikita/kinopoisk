@@ -1,16 +1,34 @@
 import styled from 'styled-components'
 
-export default function FilmDetailHeader() {
+interface FilmDetailHeaderProps {
+  title?: string
+  originalTitle?: string
+  ratingAgeLimits?: string
+}
+
+export default function FilmDetailHeader({
+  title = '',
+  originalTitle = '',
+  ratingAgeLimits = '',
+}: FilmDetailHeaderProps) {
   return (
     <Container>
-      <Title>Я могу уничтожить тебя (сериал 2020 - ...</Title>
+      {renderTitle(title)}
       <Captions>
-        <OriginalTitle>I May Destroy You</OriginalTitle>
-        <SmallAge>18+</SmallAge>
+        {renderOriginalTitle(originalTitle)}
+        {renderAgeLimits(ratingAgeLimits)}
       </Captions>
     </Container>
   )
 }
+
+const renderTitle = (title?: string) => (title ? <Title>{title}</Title> : null)
+
+const renderOriginalTitle = (originalTitle?: string) =>
+  originalTitle ? <OriginalTitle>{originalTitle}</OriginalTitle> : null
+
+const renderAgeLimits = (ratingAgeLimits?: string) =>
+  ratingAgeLimits ? <RatingAgeLimits>{ratingAgeLimits}</RatingAgeLimits> : null
 
 const Container = styled.div`
   display: flex;
@@ -37,7 +55,7 @@ const OriginalTitle = styled.span`
   font-size: 18px;
 `
 
-const SmallAge = styled.span`
+const RatingAgeLimits = styled.span`
   color: rgba(255, 255, 255, 0.6);
   border: 1px solid rgba(255, 255, 255, 0.6);
   padding: 1px 3px;

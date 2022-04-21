@@ -1,3 +1,4 @@
-import { films } from './handlers/films'
+import { filmsGet } from './handlers/films'
+import { filmGet } from './handlers/film'
 
-export const handlers = [films]
+export const handlers = [filmsGet, filmGet]

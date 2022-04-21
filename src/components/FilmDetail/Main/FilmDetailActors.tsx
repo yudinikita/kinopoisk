@@ -1,30 +1,25 @@
 import styled from 'styled-components'
 import { v4 } from 'uuid'
 
-const actors = [
-  'Василий Пупкин',
-  'Василий Пупкин',
-  'Василий Пупкин',
-  'Василий Пупкин',
-  'Василий Пупкин',
-]
+interface FilmDetailActorsProps {
+  actors?: string[]
+}
 
-export default function FilmDetailActors() {
-  const renderActors = () =>
-    actors && actors.length > 0 ? (
-      <List>
-        {actors.map((actor) => (
-          <Item key={v4()}>{actor}</Item>
-        ))}
-      </List>
-    ) : null
+export default function FilmDetailActors({ actors }: FilmDetailActorsProps) {
+  if (actors && actors.length > 0) {
+    return (
+      <Container>
+        <Title>В главных ролях</Title>
+        <List>
+          {actors.map((actor) => (
+            <Item key={v4()}>{actor}</Item>
+          ))}
+        </List>
+      </Container>
+    )
+  }
 
-  return (
-    <Container>
-      <Title>В главных ролях</Title>
-      {renderActors()}
-    </Container>
-  )
+  return null
 }
 
 const Container = styled.div`

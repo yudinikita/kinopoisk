@@ -1,10 +1,18 @@
 import styled from 'styled-components'
 
-export default function FilmDetailRating() {
+interface FilmDetailRatingProps {
+  rating?: string
+  count?: string
+}
+
+export default function FilmDetailRating({
+  rating = '',
+  count = '',
+}: FilmDetailRatingProps) {
   return (
     <Container>
-      <Value>6.0</Value>
-      <Count>320 оценок</Count>
+      <Value>{rating}</Value>
+      <Count>{count}</Count>
       <RateBtn>Оценить</RateBtn>
     </Container>
   )

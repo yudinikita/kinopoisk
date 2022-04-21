@@ -5,18 +5,30 @@ import FilmDetailTable from 'components/FilmDetail/Main/FilmDetailTable'
 import FilmDetailRating from 'components/FilmDetail/Main/FilmDetailRating'
 import FilmDetailActors from 'components/FilmDetail/Main/FilmDetailActors'
 import FilmDetailTabs from 'components/FilmDetail/Main/FilmDetailTabs'
+import type { FilmDetailType } from 'mocks/types'
 
-export default function FilmDetailMain() {
+interface FilmDetailMainProps {
+  film?: FilmDetailType
+}
+
+export default function FilmDetailMain({ film }: FilmDetailMainProps) {
   return (
     <Container>
       <Column>
-        <FilmDetailHeader />
-        <FilmDetailButtons />
-        <FilmDetailTable />
+        <FilmDetailHeader
+          title={film?.nameRu}
+          originalTitle={film?.nameOriginal}
+          ratingAgeLimits={film?.ratingAgeLimits}
+        />
+        <FilmDetailButtons videoSrc={film?.videoPlayerUrl} />
+        <FilmDetailTable table={film?.tableAboutFilm} />
       </Column>
       <Column>
-        <FilmDetailRating />
-        <FilmDetailActors />
+        <FilmDetailRating
+          rating={film?.ratingKinopoisk}
+          count={film?.ratingKinopoiskVoteCount}
+        />
+        <FilmDetailActors actors={film?.actors} />
         <FilmDetailTabs />
       </Column>
     </Container>
