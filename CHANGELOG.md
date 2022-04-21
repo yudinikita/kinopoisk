@@ -1,3 +1,15 @@
+# [1.12.0](https://github.com/nblackninja/kinopoisk/compare/v1.11.0...v1.12.0) (2022-04-21)
+
+
+### Features
+
+* **film-detail:** add additional content for film detail ([f2ca1f2](https://github.com/nblackninja/kinopoisk/commit/f2ca1f29b8983da639ecf212d6ee00dc9f9c400f))
+* **film-detail:** add film detail template on page ([ec0b17c](https://github.com/nblackninja/kinopoisk/commit/ec0b17cb5e4590dd96207dde50939202aef5a269))
+* **film-detail:** add layout for film detail ([7390819](https://github.com/nblackninja/kinopoisk/commit/73908190037220aa3dfcb6552eb95654ffe42302))
+* **film-detail:** add main content for film detail ([a0b9f60](https://github.com/nblackninja/kinopoisk/commit/a0b9f6060681b9cb251a50e03b1869d89417c627))
+* **film-detail:** add sidebar for film detail ([c9b80b5](https://github.com/nblackninja/kinopoisk/commit/c9b80b5bf11c4f7001739a13d8bedeee9f0c3fcf))
+* **film-detail:** add template for player ([6f41a03](https://github.com/nblackninja/kinopoisk/commit/6f41a038c541ac1086ca8e82c7c89a96e6ff6ea2))
+
 # [1.11.0](https://github.com/nblackninja/kinopoisk/compare/v1.10.0...v1.11.0) (2022-04-20)
 
 
