@@ -1,3 +1,13 @@
+# [1.13.0](https://github.com/nblackninja/kinopoisk/compare/v1.12.0...v1.13.0) (2022-04-21)
+
+
+### Features
+
+* **film-detail:** add api for get film detail ([8246bb9](https://github.com/nblackninja/kinopoisk/commit/8246bb9cc5aff4ebdb9f7044d9e8f3f18d459357))
+* **film-detail:** add first cover for trailer ([ac511e0](https://github.com/nblackninja/kinopoisk/commit/ac511e0422efedc790e01fb4c46b2453ed372681))
+* **film-detail:** add handler for get film detail ([b762487](https://github.com/nblackninja/kinopoisk/commit/b7624872986020ad6fb2157148a8dc49c765b6c6))
+* **film-detail:** add props for film detail ([8098203](https://github.com/nblackninja/kinopoisk/commit/809820335dbff08a4c4290ed021a021dd86e2a9b))
+
 # [1.12.0](https://github.com/nblackninja/kinopoisk/compare/v1.11.0...v1.12.0) (2022-04-21)
 
 
