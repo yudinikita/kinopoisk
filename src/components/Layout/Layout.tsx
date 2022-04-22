@@ -1,7 +1,8 @@
 import React from 'react'
 import Head from 'next/head'
-import NavBar from 'components/NavBar/NavBar'
 import styled from 'styled-components'
+import NavBar from 'components/NavBar/NavBar'
+import FooterComponent from 'components/Footer/Footer'
 
 interface LayoutProps {
   children?: React.ReactNode
@@ -29,6 +30,9 @@ export default function Layout({ children }: LayoutProps) {
         <NavBar />
       </Header>
       <Main>{children}</Main>
+      <Footer>
+        <FooterComponent />
+      </Footer>
     </>
   )
 }
@@ -42,6 +46,14 @@ const Header = styled.header`
 `
 
 const Main = styled.main`
+  margin: 0 auto;
+  padding-left: 70px;
+  padding-right: 70px;
+  max-width: ${(props) => props.theme.space.xxl};
+`
+
+const Footer = styled.footer`
+  background-color: ${(props) => props.theme.colors.bg};
   margin: 0 auto;
   padding-left: 70px;
   padding-right: 70px;
