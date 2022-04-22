@@ -1,3 +1,13 @@
+# [1.15.0](https://github.com/nblackninja/kinopoisk/compare/v1.14.0...v1.15.0) (2022-04-22)
+
+
+### Features
+
+* add page contacts ([77d3c3b](https://github.com/nblackninja/kinopoisk/commit/77d3c3b822429dec1e948b07b1486e6c17ea2d02))
+* add page privacy ([a6de4d4](https://github.com/nblackninja/kinopoisk/commit/a6de4d455803a762c4591e6090d520dd6b9312a2))
+* add page terms ([e4a36fd](https://github.com/nblackninja/kinopoisk/commit/e4a36fdc5589f7c27c2958a77deca20a9389dd92))
+* add pages for films and serials ([fc78173](https://github.com/nblackninja/kinopoisk/commit/fc78173129e1f1dc3102f78ad244ec1554ee3430))
+
 # [1.14.0](https://github.com/nblackninja/kinopoisk/compare/v1.13.0...v1.14.0) (2022-04-22)
 
 
