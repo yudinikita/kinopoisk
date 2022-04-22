@@ -19,7 +19,7 @@ const GlobalStyle = createGlobalStyle<{ theme: ThemeType }>`
   a {
     color: inherit;
     text-decoration: none;
-    transition: color 0.3ms ease-in-out;
+    transition: color 0.3s ease-in-out;
 
     &:hover {
       color: ${(props) => props.theme.colors.brand};
