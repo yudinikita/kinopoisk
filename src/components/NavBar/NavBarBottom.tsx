@@ -114,13 +114,13 @@ const FilmsToWatch = styled.a`
     width: 40px;
     height: 40px;
     content: '';
-    background-image: url('/static/icons/bookmark.svg');
+    background-image: url("data:image/svg+xml,%3Csvg width='40' height='40' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath clip-rule='evenodd' d='M19.95 4.166c-10.645 0-12.443 1.553-12.443 14.048 0 13.989-.262 17.619 2.398 17.619 2.659 0 7-6.14 10.045-6.14s7.387 6.14 10.045 6.14c2.66 0 2.399-3.63 2.399-17.619 0-12.495-1.799-14.048-12.444-14.048Z' stroke='%23fff' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
     background-size: contain;
   }
 
   :hover {
     ::before {
-      background-image: url('/static/icons/bookmark-fill.svg');
+      background-image: url("data:image/svg+xml,%3Csvg width='24' height='24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M15.07 2H8.9C6.2 2 4 3.07 4 5.79v15.18c0 .56.45 1.02 1.01 1.02.17 0 .341-.051.49-.13l6.49-3.24 6.48 3.24c.24.14.53.18.79.1.27-.08.49-.26.62-.5.08-.15.12-.32.12-.49V5.79C19.97 3.07 17.78 2 15.07 2' fill='%23fff'/%3E%3C/svg%3E");
     }
   }
 
