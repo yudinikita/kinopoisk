@@ -20,13 +20,13 @@ export const dropdownList = [
     iconFill: videoFillPic,
   },
   {
-    href: '/movies',
+    href: '/lists/films',
     title: 'Фильмы',
     icon: ticketPic,
     iconFill: ticketFillPic,
   },
   {
-    href: '/serials',
+    href: '/lists/serials',
     title: 'Сериалы',
     icon: folderPic,
     iconFill: folderFillPic,
