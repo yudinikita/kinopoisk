@@ -6,7 +6,7 @@ interface FilmPosterProps {
   filmTitle?: string
 }
 
-export default function FilmPoster({
+export default function FilmDetailPoster({
   posterUrl = '',
   filmTitle = '',
 }: FilmPosterProps) {

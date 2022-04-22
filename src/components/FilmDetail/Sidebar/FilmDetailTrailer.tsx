@@ -8,7 +8,7 @@ interface FilmTrailerProps {
   trailerDate?: string
 }
 
-export default function FilmTrailer({
+export default function FilmDetailTrailer({
   trailerCoverUrl = '',
   filmTitle = '',
   trailerLength = '',
@@ -92,7 +92,7 @@ const TrailerWatchBtn = styled.button`
   left: 10px;
   display: flex;
   align-items: center;
-  padding: 15px 20px;
+  padding: 10px 15px;
   margin: 0;
   background-color: ${(props) => props.theme.colors.brand};
   border: 0;
