@@ -11,11 +11,14 @@ const Watchlist: NextPage = () => {
 
   if (watchlist && watchlist.length > 0) {
     return (
-      <Container>
-        {watchlist.map((film) => (
-          <FilmCard key={v4()} {...film} />
-        ))}
-      </Container>
+      <>
+        <Title>Буду смотреть</Title>
+        <Container>
+          {watchlist.map((film) => (
+            <FilmCard key={v4()} {...film} />
+          ))}
+        </Container>
+      </>
     )
   }
 
@@ -47,6 +50,13 @@ const Container = styled.div`
   padding-bottom: 50px;
 `
 
+const Title = styled.h1`
+  margin: 0;
+  margin-bottom: 20px;
+  font-weight: 500;
+  font-size: 44px;
+`
+
 const ContainerNotFound = styled.div`
   text-align: center;
   margin: 0 auto;
@@ -66,7 +76,7 @@ const FilmsToWatch = styled.div`
     width: 100px;
     height: 100px;
     content: '';
-    background-image: url('/static/icons/bookmark.svg');
+    background-image: url("data:image/svg+xml,%3Csvg width='40' height='40' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath clip-rule='evenodd' d='M19.95 4.166c-10.645 0-12.443 1.553-12.443 14.048 0 13.989-.262 17.619 2.398 17.619 2.659 0 7-6.14 10.045-6.14s7.387 6.14 10.045 6.14c2.66 0 2.399-3.63 2.399-17.619 0-12.495-1.799-14.048-12.444-14.048Z' stroke='%23fff' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
     background-size: contain;
   }
 `
@@ -82,10 +92,14 @@ const LinkToHome = styled.button`
   border: 2px solid ${(props) => props.theme.colors.brand};
   background-color: transparent;
   cursor: pointer;
-  transition: all 0.3s ease-in-out;
+  transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
 
   &:hover {
     color: white;
     background-color: ${(props) => props.theme.colors.brand};
+  }
+
+  &:active {
+    transform: scale(0.98);
   }
 `
