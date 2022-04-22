@@ -1,3 +1,16 @@
+# [1.14.0](https://github.com/nblackninja/kinopoisk/compare/v1.13.0...v1.14.0) (2022-04-22)
+
+
+### Bug Fixes
+
+* **styles:** change transition delay for a ([c43d604](https://github.com/nblackninja/kinopoisk/commit/c43d604a4ca268662122c93de13a3a20d7d93a93))
+
+
+### Features
+
+* add footer ([caf48ac](https://github.com/nblackninja/kinopoisk/commit/caf48ace88132f257c306991faba1ec6acdfdc95))
+* **watchlist:** add title ([6db8b4f](https://github.com/nblackninja/kinopoisk/commit/6db8b4fff2d04e3ae964985bbac167e67e86ee09))
+
 # [1.13.0](https://github.com/nblackninja/kinopoisk/compare/v1.12.0...v1.13.0) (2022-04-21)
 
 
