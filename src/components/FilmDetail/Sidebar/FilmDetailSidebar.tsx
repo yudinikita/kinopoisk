@@ -1,8 +1,8 @@
 import styled from 'styled-components'
-import FilmTrailer from './FilmTrailer'
-import WatchLaterBtn from './WatchLaterBtn'
-import FilmPoster from './FilmPoster'
+import FilmDetailTrailer from 'components/FilmDetail/Sidebar/FilmDetailTrailer'
+import FilmDetailPoster from 'components/FilmDetail/Sidebar/FilmDetailPoster'
 import { FilmDetailType } from 'mocks/types'
+import WatchLaterBtn from './WatchLaterBtn'
 
 interface FilmDetailMainProps {
   film?: FilmDetailType
@@ -12,8 +12,11 @@ export default function FilmDetailSidebar({ film }: FilmDetailMainProps) {
   return (
     <Container>
       <Wrapper>
-        <FilmPoster posterUrl={film?.posterUrl} filmTitle={film?.nameRu} />
-        <FilmTrailer
+        <FilmDetailPoster
+          posterUrl={film?.posterUrl}
+          filmTitle={film?.nameRu}
+        />
+        <FilmDetailTrailer
           filmTitle={film?.nameRu}
           trailerCoverUrl={film?.trailerCoverUrl}
           trailerLength={film?.trailerLength}
