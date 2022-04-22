@@ -1,8 +1,8 @@
-import type { NextPage } from 'next'
 import PromoSlider from 'components/PromoSlider/PromoSlider'
 import FilmCarouselSection from 'components/FilmCarousel/FilmCarouselSection'
 import { FilmCardProps } from 'components/FilmCard/FilmCard'
 import { loadFilms } from 'api/films'
+import type { NextPage } from 'next'
 
 interface HomeProps {
   filmTickets?: FilmCardProps[]
