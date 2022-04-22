@@ -1,5 +1,6 @@
 import { NextPage, NextPageContext } from 'next'
 import Error from 'next/error'
+
 interface Props {
   statusCode?: number
 }
