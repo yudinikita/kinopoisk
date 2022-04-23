@@ -57,7 +57,7 @@ const DropdownContent = styled.div`
   width: max-content;
   font-size: 22px;
   border-radius: ${(props) => props.theme.border.base};
-  z-index: 1;
+  z-index: 500;
   transition: visibility 0s, opacity 0.3s linear;
 
   ${ListIcon} {

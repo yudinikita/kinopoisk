@@ -17,7 +17,9 @@ export default function NavBarBottom() {
 
   return (
     <Container>
-      <DropDown />
+      <DropDownContainer>
+        <DropDown />
+      </DropDownContainer>
       <SearchInputContainer>
         <SearchInput
           type="text"
@@ -54,15 +56,29 @@ export default function NavBarBottom() {
 }
 
 const Container = styled.div`
-  display: flex;
+  display: grid;
+  grid-template-areas: 'c1 c2 c3';
+  grid-template-columns: max-content 1fr max-content;
   justify-content: space-between;
   align-items: center;
+
+  @media (max-width: ${(props) => props.theme.space.sm}) {
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas:
+      'c2 c2'
+      'c1 c3';
+  }
+`
+
+const DropDownContainer = styled.div`
+  grid-area: c1;
 `
 
 const SearchInputContainer = styled.div`
   width: 100%;
   position: relative;
   z-index: 20;
+  grid-area: c2;
 `
 
 const SearchInput = styled.input`
@@ -108,6 +124,7 @@ const CloseBtn = styled.button`
 const FilmsToWatch = styled.a`
   padding: 35px 10px 35px 50px;
   filter: opacity(0.7);
+  grid-area: c3;
 
   ::before {
     display: block;
@@ -126,5 +143,11 @@ const FilmsToWatch = styled.a`
 
   :active {
     transform: scale(0.96);
+  }
+
+  @media (max-width: ${(props) => props.theme.space.sm}) {
+    ::before {
+      margin-left: auto;
+    }
   }
 `

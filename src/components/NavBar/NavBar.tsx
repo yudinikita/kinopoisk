@@ -16,6 +16,14 @@ export default function NavBar() {
 const Wrapper = styled.div`
   max-width: ${(props) => props.theme.space.xxl};
   margin: 70px auto 50px;
+
+  @media (max-width: ${(props) => props.theme.space.md}) {
+    padding: 0 30px;
+  }
+
+  @media (max-width: ${(props) => props.theme.space.sm}) {
+    margin: 50px auto 25px;
+  }
 `
 
 const Divider = styled.div`
