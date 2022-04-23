@@ -41,9 +41,23 @@ const ContentContainer = styled.div`
   left: 0;
   margin: 0 auto;
   padding: 20px 70px 400px 70px;
-  width: ${(props) => props.theme.space.xxl};
+  max-width: ${(props) => props.theme.space.xxl};
   background-color: transparent;
   overflow: hidden;
+  justify-items: center;
+
+  @media (max-width: ${(props) => props.theme.space.xl}) {
+    padding: 20px 30px 400px 30px;
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+
+  @media (max-width: ${(props) => props.theme.space.md}) {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  @media (max-width: ${(props) => props.theme.space.sm}) {
+    grid-template-columns: 1fr;
+  }
 `
 
 const NotFound = styled.p`
