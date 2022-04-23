@@ -2,6 +2,8 @@
 
 Internet service about movies. Movie search, movie news, user reviews, theater listings, photos, posters, trailers, box office, and more.
 
+![Film detail page](https://user-images.githubusercontent.com/36636599/164914463-aac46cd6-7abe-491a-8cfe-dbea183bf57e.png)
+
 ## 🛠 Technologies
 - NextJS + React
 - TypeScript
