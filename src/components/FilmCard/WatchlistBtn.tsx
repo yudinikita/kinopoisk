@@ -40,7 +40,7 @@ const WatchlistBtn = css`
   pointer-events: all;
 
   &:hover {
-    filter: opacity(0.8);
+    filter: opacity(0.9);
   }
 
   &:active {
