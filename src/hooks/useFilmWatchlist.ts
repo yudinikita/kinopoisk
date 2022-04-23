@@ -1,13 +1,12 @@
+import { useEffect, useState } from 'react'
 import {
   addFilmToWatchlist,
   currentWatchlist,
   removeFilmFromWatchlist,
 } from 'reducers/watchlist'
-import { useEffect, useState } from 'react'
 import { useAppDispatch, useAppSelector } from 'app/hooks'
-import { FilmCardProps } from 'components/FilmCard/FilmCard'
 
-export const useFilmCard = (id: Pick<FilmCardProps, 'id'>) => {
+export const useFilmWatchlist = (id: string) => {
   const [deleteWatchlistBtn, setDeleteWatchlistBtn] = useState(false)
 
   const dispatch = useAppDispatch()

@@ -17,7 +17,7 @@ const initialState: WatchlistState = {
 
 export const addFilmToWatchlist = createAsyncThunk(
   'watchlist/addFilm',
-  async (filmId: Pick<FilmCardProps, 'id'>) => {
+  async (filmId: string) => {
     const foundFilms = await loadFilms({ id: filmId.toString() })
     return foundFilms[0]
   }
@@ -27,7 +27,7 @@ export const watchlist = createSlice({
   name: 'watchlist',
   initialState,
   reducers: {
-    removeFilmFromWatchlist: (state, action: PayloadAction<FilmCardProps>) => {
+    removeFilmFromWatchlist: (state, action: PayloadAction<string>) => {
       state.list = state.list.filter((film) => film.id !== action.payload)
     },
   },

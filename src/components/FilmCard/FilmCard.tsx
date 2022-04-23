@@ -2,7 +2,7 @@ import React from 'react'
 import Link from 'next/link'
 import Image from 'next/image'
 import styled from 'styled-components'
-import { useFilmCard } from './hooks/useFilmCard'
+import { useFilmWatchlist } from 'hooks/useFilmWatchlist'
 import { RemoveWatchlistBtn, AddWatchlistBtn } from './WatchlistBtn'
 
 export interface FilmCardProps extends React.HTMLAttributes<HTMLDivElement> {
@@ -29,7 +29,7 @@ export default function FilmCard({
     deleteWatchlistBtn,
     handleDeleteWatchlistBtn,
     handleAddWatchlistBtn,
-  } = useFilmCard(id as Pick<FilmCardProps, 'id'>)
+  } = useFilmWatchlist(id)
 
   const renderDivider = () => (year && genre ? ', ' : null)
 
