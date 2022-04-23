@@ -1,13 +1,23 @@
 import Link from 'next/link'
 import styled from 'styled-components'
+import React from 'react'
+import { useFilmWatchlist } from 'hooks/useFilmWatchlist'
 
 interface FilmDetailButtonsProps {
   videoSrc?: string
+  filmId?: string
 }
 
 export default function FilmDetailButtons({
   videoSrc,
+  filmId = '',
 }: FilmDetailButtonsProps) {
+  const {
+    deleteWatchlistBtn,
+    handleDeleteWatchlistBtn,
+    handleAddWatchlistBtn,
+  } = useFilmWatchlist(filmId)
+
   const renderWatchBtn = () =>
     videoSrc ? (
       <Link href="#filmPlayer" passHref>
@@ -30,10 +40,24 @@ export default function FilmDetailButtons({
       </Link>
     ) : null
 
-  return (
-    <Container>
-      {renderWatchBtn()}
-      <WatchLaterBtn>
+  const renderWatchlistBtn = () =>
+    deleteWatchlistBtn ? (
+      <WatchLaterBtn onClick={handleDeleteWatchlistBtn}>
+        <svg
+          width="20"
+          height="20"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+          viewBox="0 0 24 24"
+        >
+          <path
+            d="M15.07 2H8.9C6.2 2 4 3.07 4 5.79v15.18c0 .56.45 1.02 1.01 1.02.17 0 .341-.051.49-.13l6.49-3.24 6.48 3.24c.24.14.53.18.79.1.27-.08.49-.26.62-.5.08-.15.12-.32.12-.49V5.79C19.97 3.07 17.78 2 15.07 2"
+            fill="#f60"
+          />
+        </svg>
+      </WatchLaterBtn>
+    ) : (
+      <WatchLaterBtn onClick={handleAddWatchlistBtn}>
         <svg
           width="20"
           height="20"
@@ -47,6 +71,11 @@ export default function FilmDetailButtons({
           />
         </svg>
       </WatchLaterBtn>
+    )
+
+  return (
+    <Container>
+      {renderWatchBtn()} {renderWatchlistBtn()}
     </Container>
   )
 }

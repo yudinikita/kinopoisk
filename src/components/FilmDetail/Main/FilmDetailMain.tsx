@@ -1,10 +1,10 @@
 import styled from 'styled-components'
-import FilmDetailHeader from './FilmDetailHeader'
 import FilmDetailButtons from 'components/FilmDetail/Main/FilmDetailButtons'
 import FilmDetailTable from 'components/FilmDetail/Main/FilmDetailTable'
 import FilmDetailRating from 'components/FilmDetail/Main/FilmDetailRating'
 import FilmDetailActors from 'components/FilmDetail/Main/FilmDetailActors'
 import FilmDetailTabs from 'components/FilmDetail/Main/FilmDetailTabs'
+import FilmDetailHeader from './FilmDetailHeader'
 import type { FilmDetailType } from 'mocks/types'
 
 interface FilmDetailMainProps {
@@ -20,7 +20,7 @@ export default function FilmDetailMain({ film }: FilmDetailMainProps) {
           originalTitle={film?.nameOriginal}
           ratingAgeLimits={film?.ratingAgeLimits}
         />
-        <FilmDetailButtons videoSrc={film?.videoPlayerUrl} />
+        <FilmDetailButtons filmId={film?.id} videoSrc={film?.videoPlayerUrl} />
         <FilmDetailTable table={film?.tableAboutFilm} />
       </Column>
       <Column>
