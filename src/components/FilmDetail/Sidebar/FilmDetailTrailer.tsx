@@ -58,6 +58,10 @@ const PosterContainer = styled.div`
   min-height: 170px;
   background: rgba(230, 230, 230, 0.5);
   border-radius: ${(props) => props.theme.border.base};
+
+  @media (max-width: ${(props) => props.theme.space.lg}) {
+    min-height: 320px;
+  }
 `
 
 const TrailerPoster = styled(Image)`
