@@ -1,7 +1,27 @@
 import styled from 'styled-components'
+import { useFilmWatchlist } from 'hooks/useFilmWatchlist'
 
-export default function WatchLaterBtn() {
-  return <WatchLater>Буду смотреть</WatchLater>
+interface WatchLaterBtn {
+  filmId?: string
+}
+
+export default function WatchLaterBtn({ filmId = '' }: WatchLaterBtn) {
+  const {
+    deleteWatchlistBtn,
+    handleDeleteWatchlistBtn,
+    handleAddWatchlistBtn,
+  } = useFilmWatchlist(filmId)
+
+  const renderWatchLaterBtn = () =>
+    deleteWatchlistBtn ? (
+      <WatchLater onClick={handleDeleteWatchlistBtn}>
+        Не буду смотреть
+      </WatchLater>
+    ) : (
+      <WatchLater onClick={handleAddWatchlistBtn}>Буду смотреть</WatchLater>
+    )
+
+  return renderWatchLaterBtn()
 }
 
 const WatchLater = styled.button`

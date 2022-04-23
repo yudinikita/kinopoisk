@@ -22,7 +22,7 @@ export default function FilmDetailSidebar({ film }: FilmDetailMainProps) {
           trailerLength={film?.trailerLength}
           trailerDate={film?.trailerDate}
         />
-        <WatchLaterBtn />
+        <WatchLaterBtn filmId={film?.id} />
       </Wrapper>
     </Container>
   )
