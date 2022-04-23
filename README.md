@@ -16,14 +16,14 @@ Internet service about movies. Movie search, movie news, user reviews, theater l
 - Films search bar
 - Ability to add films to watchlist
 - Responsive on mobile and FullHD
-- Film detail page
-- - Name ru and original
-- - About film table (year of production, country, genre and more)
-- - Rating film
-- - Actor cast
-- - Description film
-- - Video player
-- - Similar films
+- Film detail page:
+  - Name ru and original
+  - About film table (year of production, country, genre and more)
+  - Rating film
+  - Actor cast
+  - Description film
+  - Video player
+  - Similar films
 
 ## 🖥 Support
 
