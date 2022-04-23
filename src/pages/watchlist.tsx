@@ -48,6 +48,19 @@ const Container = styled.div`
   grid-template-columns: 1fr 1fr 1fr 1fr;
   row-gap: 50px;
   padding-bottom: 50px;
+
+  @media (max-width: ${(props) => props.theme.space.xl}) {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+
+  @media (max-width: ${(props) => props.theme.space.md}) {
+    grid-template-columns: 1fr 1fr;
+    justify-items: center;
+  }
+
+  @media (max-width: ${(props) => props.theme.space.sm}) {
+    grid-template-columns: 1fr;
+  }
 `
 
 const Title = styled.h1`
@@ -55,6 +68,10 @@ const Title = styled.h1`
   margin-bottom: 20px;
   font-weight: 500;
   font-size: 44px;
+
+  @media (max-width: ${(props) => props.theme.space.md}) {
+    font-size: 28px;
+  }
 `
 
 const ContainerNotFound = styled.div`
