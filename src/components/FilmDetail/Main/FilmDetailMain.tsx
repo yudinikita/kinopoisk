@@ -24,12 +24,14 @@ export default function FilmDetailMain({ film }: FilmDetailMainProps) {
         <FilmDetailTable table={film?.tableAboutFilm} />
       </Column>
       <Column>
-        <FilmDetailRating
-          rating={film?.ratingKinopoisk}
-          count={film?.ratingKinopoiskVoteCount}
-        />
-        <FilmDetailActors actors={film?.actors} />
-        <FilmDetailTabs />
+        <OtherContainer>
+          <FilmDetailRating
+            rating={film?.ratingKinopoisk}
+            count={film?.ratingKinopoiskVoteCount}
+          />
+          <FilmDetailActors actors={film?.actors} />
+          <FilmDetailTabs />
+        </OtherContainer>
       </Column>
     </Container>
   )
@@ -37,10 +39,26 @@ export default function FilmDetailMain({ film }: FilmDetailMainProps) {
 
 const Container = styled.div`
   display: flex;
+
+  @media (max-width: ${(props) => props.theme.space.xl}) {
+    flex-direction: column;
+  }
 `
 
 const Column = styled.div`
   display: flex;
   flex-direction: column;
   padding: 0 10px;
+
+  @media (max-width: ${(props) => props.theme.space.xl}) {
+    &:not(&:last-child) {
+      margin-bottom: 50px;
+    }
+  }
+`
+
+const OtherContainer = styled.div`
+  @media (max-width: ${(props) => props.theme.space.xl}) {
+    display: none;
+  }
 `

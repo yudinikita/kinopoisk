@@ -31,6 +31,10 @@ const Container = styled.div`
   flex-direction: column;
   padding: 0 10px;
   width: 600px;
+
+  @media (max-width: ${(props) => props.theme.space.lg}) {
+    width: 100%;
+  }
 `
 
 const Title = styled.h3`
@@ -57,6 +61,12 @@ const Property = styled.div`
   font-weight: 400;
   font-size: 16px;
   color: ${(props) => props.theme.colors.gray5};
+  text-overflow: ellipsis;
+  overflow: hidden;
+
+  @media (max-width: ${(props) => props.theme.space.sm}) {
+    width: 50%;
+  }
 `
 
 const Value = styled.div`
@@ -64,4 +74,10 @@ const Value = styled.div`
   font-weight: 400;
   font-size: 16px;
   color: white;
+  text-overflow: ellipsis;
+  overflow: hidden;
+
+  @media (max-width: ${(props) => props.theme.space.sm}) {
+    width: 50%;
+  }
 `

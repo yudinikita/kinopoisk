@@ -35,6 +35,10 @@ const Container = styled.div`
   flex-direction: column;
   padding: 0 10px;
   width: 600px;
+
+  @media (max-width: ${(props) => props.theme.space.lg}) {
+    width: 100%;
+  }
 `
 
 const Title = styled.h1`
