@@ -1,6 +1,6 @@
 import React from 'react'
 import Head from 'next/head'
-import styled from 'styled-components'
+import styled, { css } from 'styled-components'
 import NavBar from 'components/NavBar/NavBar'
 import FooterComponent from 'components/Footer/Footer'
 
@@ -37,25 +37,32 @@ export default function Layout({ children }: LayoutProps) {
   )
 }
 
-const Header = styled.header`
+const commonStyles = css`
   background-color: ${(props) => props.theme.colors.bg};
   margin: 0 auto;
-  padding-left: 70px;
-  padding-right: 70px;
+  padding: 0 70px;
   max-width: ${(props) => props.theme.space.xxl};
+
+  @media (max-width: ${(props) => props.theme.space.md}) {
+    padding: 0 30px;
+  }
+
+  @media (max-width: ${(props) => props.theme.space.xs}) {
+    padding: 0 15px;
+  }
+`
+
+const Header = styled.header`
+  ${commonStyles} {
+  }
 `
 
 const Main = styled.main`
-  margin: 0 auto;
-  padding-left: 70px;
-  padding-right: 70px;
-  max-width: ${(props) => props.theme.space.xxl};
+  ${commonStyles} {
+  }
 `
 
 const Footer = styled.footer`
-  background-color: ${(props) => props.theme.colors.bg};
-  margin: 0 auto;
-  padding-left: 70px;
-  padding-right: 70px;
-  max-width: ${(props) => props.theme.space.xxl};
+  ${commonStyles} {
+  }
 `
