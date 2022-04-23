@@ -49,18 +49,38 @@ const Container = styled.div``
 
 const ContainerMain = styled.div`
   display: flex;
+
+  @media (max-width: ${(props) => props.theme.space.xl}) {
+    justify-content: space-between;
+  }
+
+  @media (max-width: ${(props) => props.theme.space.lg}) {
+    flex-direction: column;
+  }
 `
 
 const Sidebar = styled.div`
-  width: 320px;
+  min-width: 320px;
+
+  @media (max-width: ${(props) => props.theme.space.lg}) {
+    order: 1;
+  }
 `
 
 const Delimiter = styled.div`
   flex: 0 0 30px;
   width: 30px;
+
+  @media (max-width: ${(props) => props.theme.space.lg}) {
+    display: none;
+  }
 `
 
-const Main = styled.div``
+const Main = styled.div`
+  @media (max-width: ${(props) => props.theme.space.lg}) {
+    order: 0;
+  }
+`
 
 const Additional = styled.div``
 
