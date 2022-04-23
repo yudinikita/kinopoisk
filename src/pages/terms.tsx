@@ -114,6 +114,10 @@ const Title = styled.h1`
   margin-bottom: 30px;
   font-weight: 500;
   font-size: 44px;
+
+  @media (max-width: ${(props) => props.theme.space.md}) {
+    font-size: 28px;
+  }
 `
 
 const List = styled.ul`
