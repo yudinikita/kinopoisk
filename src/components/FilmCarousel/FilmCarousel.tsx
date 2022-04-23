@@ -11,8 +11,8 @@ export interface FilmCarouselProps {
 
 export default function FilmCarousel({ slides = [] }: FilmCarouselProps) {
   const [viewportRef, embla] = useEmblaCarousel({
-    slidesToScroll: 5,
     align: 'start',
+    containScroll: 'trimSnaps',
   })
   const [prevBtnEnabled, setPrevBtnEnabled] = useState(false)
   const [nextBtnEnabled, setNextBtnEnabled] = useState(false)
@@ -69,4 +69,20 @@ const Slide = styled.div`
   display: flex;
   justify-content: space-between;
   padding-left: 10px;
+
+  @media (max-width: ${(props) => props.theme.space.xxl}) {
+    flex: 0 0 25%;
+  }
+
+  @media (max-width: ${(props) => props.theme.space.xl}) {
+    flex: 0 0 25%;
+  }
+
+  @media (max-width: ${(props) => props.theme.space.lg}) {
+    flex: 0 0 33.3333%;
+  }
+
+  @media (max-width: ${(props) => props.theme.space.md}) {
+    flex: 0 0 0;
+  }
 `
