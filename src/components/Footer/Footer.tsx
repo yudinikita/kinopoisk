@@ -36,12 +36,20 @@ export default function Footer() {
 }
 
 const Container = styled.div`
-  display: flex;
+  display: grid;
+  grid-template: '. . .';
   justify-content: space-between;
   margin: 0 auto;
   padding: 100px 0 50px;
-  max-width: ${(props) => props.theme.space.xxl};
   color: ${(props) => props.theme.colors.gray3};
+  line-height: 180%;
+
+  @media (max-width: ${(props) => props.theme.space.xl}) {
+    grid-template: '.';
+    row-gap: 40px;
+    justify-content: center;
+    text-align: center;
+  }
 `
 
 const Name = styled.p`
@@ -55,6 +63,13 @@ const LinksGroup = styled.div`
   grid-column-gap: 25px;
   margin: 0;
   font-size: 20px;
+
+  @media (max-width: ${(props) => props.theme.space.md}) {
+    grid-template: '.';
+    row-gap: 40px;
+    justify-content: center;
+    text-align: center;
+  }
 `
 
 const AuthorGroup = styled.div`
