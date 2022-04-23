@@ -1,8 +1,10 @@
 import React from 'react'
 import styled from 'styled-components'
+import FilmPlayer from 'components/FilmPlayer/FilmPlayer'
 
 interface FilmDetailPlayerProps {
   videoSrc?: string
+  filmId?: string
 }
 
 export default function FilmDetailPlayer({ videoSrc }: FilmDetailPlayerProps) {
@@ -10,9 +12,7 @@ export default function FilmDetailPlayer({ videoSrc }: FilmDetailPlayerProps) {
 
   return (
     <Container id="filmPlayer">
-      <Video>
-        <source src={videoSrc} />
-      </Video>
+      <FilmPlayer url={videoSrc} />
     </Container>
   )
 }
@@ -20,15 +20,9 @@ export default function FilmDetailPlayer({ videoSrc }: FilmDetailPlayerProps) {
 const Container = styled.div`
   display: flex;
   margin-top: 50px;
-  height: 680px;
-  border-radius: 15px;
-  overflow: hidden;
-`
-
-const Video = styled.video`
-  top: -2px;
-  width: 100%;
+  min-height: 100%;
   height: auto;
-  object-fit: cover;
+  width: 100%;
+  border-radius: 15px;
   overflow: hidden;
 `
