@@ -1,3 +1,10 @@
+## [1.17.1](https://github.com/nblackninja/kinopoisk/compare/v1.17.0...v1.17.1) (2022-04-23)
+
+
+### Bug Fixes
+
+* **navbar:** fix responsive on mobile user avatar ([075ea7f](https://github.com/nblackninja/kinopoisk/commit/075ea7ff1a18dfd4f64c6d0e25ace3240b9784ea))
+
 # [1.17.0](https://github.com/nblackninja/kinopoisk/compare/v1.16.0...v1.17.0) (2022-04-23)
 
 
