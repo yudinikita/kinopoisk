@@ -12,7 +12,7 @@ Internet service about movies. Movie search, movie news, user reviews, theater l
 
 ## ✨ Features
 - Personalization promo banner on main page
-- Slider with films
+- Carousel with films
 - Films search bar
 - Ability to add films to watchlist
 - Responsive on mobile and FullHD
