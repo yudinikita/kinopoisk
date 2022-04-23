@@ -1,3 +1,25 @@
+# [1.17.0](https://github.com/nblackninja/kinopoisk/compare/v1.16.0...v1.17.0) (2022-04-23)
+
+
+### Features
+
+* **film-carousel:** add styles for responsive ([3712cf7](https://github.com/nblackninja/kinopoisk/commit/3712cf7d3aee3ef19321b41100f943737c98fb4c))
+* **film-detail-additional:** add styles for responsive ([ba38a44](https://github.com/nblackninja/kinopoisk/commit/ba38a44156a24aa812abec3cf90ab6adb6c64bd0))
+* **film-detail-layout:** add styles for responsive ([ca0b966](https://github.com/nblackninja/kinopoisk/commit/ca0b966c32d9af57052bba4de9828651c59861c2))
+* **film-detail-main:** add styles for responsive ([60ee27f](https://github.com/nblackninja/kinopoisk/commit/60ee27f4a1e8a9e5d2e053616535d7694f31102d))
+* **film-detail-trailer:** add styles for responsive ([de9a760](https://github.com/nblackninja/kinopoisk/commit/de9a760eb50fb4aee54938d5cedb29a354e917c5))
+* **films:** add styles for responsive ([7d5118c](https://github.com/nblackninja/kinopoisk/commit/7d5118c4c8b4aad39aac868924c6784bbc2a5432))
+* **footer:** add styles for responsive ([82b164d](https://github.com/nblackninja/kinopoisk/commit/82b164d6d4ad38ca43212410d798d4e370db0cbb))
+* **index-page:** add load promo film data ([d5612b2](https://github.com/nblackninja/kinopoisk/commit/d5612b208c55ce5f11aa05b78c2a1da08a2ea205))
+* **layout:** add styles for responsive ([8e21d80](https://github.com/nblackninja/kinopoisk/commit/8e21d8089ef35236a9a676f9989f91a8b3c4bf5d))
+* **navbar:** add styles for responsive ([be77595](https://github.com/nblackninja/kinopoisk/commit/be77595d3a5ad6d424e0ea2fc07ce0f0a76ed6d9))
+* **privacy:** add styles for responsive ([3c85bfb](https://github.com/nblackninja/kinopoisk/commit/3c85bfb0fc2b2a4c25d801d759db605bc72cefaf))
+* **promo-slider:** add styles for responsive ([23c75ec](https://github.com/nblackninja/kinopoisk/commit/23c75ecfaf0239e85e58eb87c8cbad08f863bb5a))
+* **search:** add styles for responsive ([2f75760](https://github.com/nblackninja/kinopoisk/commit/2f757605b3702a6ec67e092f134d694dd8bb487c))
+* **serials:** add styles for responsive ([3e88ac6](https://github.com/nblackninja/kinopoisk/commit/3e88ac607f779c2b7a8fc5fe0815203442459498))
+* **terms:** add styles for responsive ([d7e6c8b](https://github.com/nblackninja/kinopoisk/commit/d7e6c8b3c544dcbf2ffbea2bdad8987c51b6f8c8))
+* **watchlist:** add styles for responsive ([dd14eda](https://github.com/nblackninja/kinopoisk/commit/dd14edac57b500b1ebade6c40470445ab7aeb569))
+
 # [1.16.0](https://github.com/nblackninja/kinopoisk/compare/v1.15.0...v1.16.0) (2022-04-23)
 
 
