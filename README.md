@@ -11,7 +11,7 @@ Internet service about movies. Movie search, movie news, user reviews, theater l
 - ESLint + husky + lint-staged + prettier + semantic-release
 
 ## ✨ Features
-- Promo banner on main page
+- Personalization promo banner on main page
 - Slider with films
 - Films search bar
 - Ability to add films to watchlist
