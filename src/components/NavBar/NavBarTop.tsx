@@ -44,7 +44,7 @@ const Container = styled.div`
     grid-template: '. .';
   }
 
-  @media (max-width: ${(props) => props.theme.space.xs}) {
+  @media (max-width: ${(props) => props.theme.space.sm}) {
     grid-template: '.';
     justify-content: center;
   }
@@ -83,7 +83,7 @@ const Avatar = styled.div`
   height: 55px;
   border-radius: 30px;
 
-  @media (max-width: ${(props) => props.theme.space.xs}) {
+  @media (max-width: ${(props) => props.theme.space.sm}) {
     display: none;
   }
 `
