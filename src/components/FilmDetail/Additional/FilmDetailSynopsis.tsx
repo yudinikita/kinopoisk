@@ -26,6 +26,10 @@ const Title = styled.h3`
   margin-bottom: 20px;
   font-weight: 500;
   font-size: 44px;
+
+  @media (max-width: ${(props) => props.theme.space.md}) {
+    font-size: 28px;
+  }
 `
 
 const Synopsis = styled.p`
