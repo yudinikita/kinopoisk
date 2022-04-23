@@ -1,3 +1,15 @@
+# [1.16.0](https://github.com/nblackninja/kinopoisk/compare/v1.15.0...v1.16.0) (2022-04-23)
+
+
+### Features
+
+* add 10 films for mock api ([a902504](https://github.com/nblackninja/kinopoisk/commit/a902504a6037b03cd2991a4509c8cc1b2045c768))
+* add ability for add watchlist in film detail sidebar ([fded22a](https://github.com/nblackninja/kinopoisk/commit/fded22a964adfffb7f75ffd7d2734888f6061b3d))
+* add icon arrow right ([d5b0335](https://github.com/nblackninja/kinopoisk/commit/d5b0335e508fc978868389402b063aa6837f5855))
+* add react player for film ([5e9e012](https://github.com/nblackninja/kinopoisk/commit/5e9e01250fc567a8afe32c772257e81e44d5b229))
+* add react-player ([852dcf8](https://github.com/nblackninja/kinopoisk/commit/852dcf8fb8eed8f924626e907adc22f04aacd2b0))
+* add trailer covers ([99f7d94](https://github.com/nblackninja/kinopoisk/commit/99f7d94162e9aa8518c1d641a6eaacefdf5459df))
+
 # [1.15.0](https://github.com/nblackninja/kinopoisk/compare/v1.14.0...v1.15.0) (2022-04-22)
 
 
