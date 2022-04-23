@@ -65,6 +65,7 @@
     "next": "12.1.5",
     "react": "18.0.0",
     "react-dom": "18.0.0",
+    "react-player": "^2.10.0",
     "react-redux": "^8.0.0",
     "styled-components": "^5.3.5",
     "use-debounce": "^7.0.1",
