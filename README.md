@@ -33,7 +33,7 @@ Internet service about movies. Movie search, movie news, user reviews, theater l
 | --- | --- | --- | --- |
 | last 2 versions | last 2 versions | last 2 versions | last 2 versions |
 
-## Installation
+## 📝 Installation
 
 ```bash
 git clone https://github.com/nblackninja/kinopoisk.git
